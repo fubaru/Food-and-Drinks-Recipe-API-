@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>D&F recipes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/homePage.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
 </head>
-<body>
-    
+
+<body class="bg-gray-600">
+    <header>
+        <h1 class="">F&D RECIPES</h1>
+    </header>
+    <div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+            <h2 class="text-2xl font-extrabold text-gray-900"></h2>
+      
+            <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6">
+              <div class="group relative">
+                <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <img src="./assets/images/drinks_homePage.jpg" alt="drink image" class="w-full h-full object-center object-cover">
+                </div>
+                <h3 class="mt-6 text-sm text-gray-500">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    Cocktails recipes
+                  </a>
+                </h3>
+                <p class="text-base font-semibold text-gray-900">Enjoy our Recipes Selection</p>
+              </div>
+      
+              <div class="group relative">
+                <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                  <img src="./assets/images/food_homePage.jpg" alt="food image" class="w-full h-full object-center object-cover">
+                </div>
+                <h3 class="mt-6 text-sm text-gray-500">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                   food Recipes
+                  </a>
+                </h3>
+                <p class="text-base font-semibold text-gray-900">Enjoy our Recipes Selection</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
+
 </html>
