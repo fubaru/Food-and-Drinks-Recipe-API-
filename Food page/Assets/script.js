@@ -11,13 +11,18 @@ function toggleNav(){
 }
 
 /* close nav when clicking on a nav item*/
-document.addEventListener("click", function(e){
-    if(e.target.closet(".nav-item")){
-        toggleNav();
+document.addEventListener("click", function(event){
+   if(event.target.closet(".nav-item")){
+    toggleNav();
     }
-}
+});
 
-
-)
-
-
+/*-------------sticky header--------------*/
+window.addEventListener("scroll", function(){
+    if(this.scrollY > 60){
+        document.querySelector(".header").classList.add("sticky");
+    }
+   else{
+    document.querySelector(".header").classList.remove("sticky");
+   }
+});
