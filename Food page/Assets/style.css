@@ -36,9 +36,25 @@ body{
     background-color: red;
     margin: auto;
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
 
 /* header  */
-.header .logo{}
+.header{
+    padding: 12px 0;
+    background-color: black;
+}
+.header .logo{ 
+    background-color: var(--main-color);
+}
 .header .nav-toggler{
    height: 34px; 
    width: 44px;
