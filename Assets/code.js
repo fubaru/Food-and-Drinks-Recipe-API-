@@ -19,3 +19,37 @@ var instructions1El = document.querySelector("#instructions2");
 var instructions1El = document.querySelector("#instructions3");
 var instructions1El = document.querySelector("#instructions4");
 var instructions1El = document.querySelector("#instructions5");
+
+// fuunction to display drinks
+function displyDrinks(event) {
+    event.preventDefault();
+    var drinksName = drinksEl.value
+
+    //call populate data function with api below
+    populateData(drinksName);
+};
+
+function populateData(drinksName) {
+    var urlMargs = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita`
+    fetch(urlMargs)
+        .then(function(response){
+            return response.json();
+        }) 
+        .then(function(currentData) {
+            console.log(currentData)
+            drinkCard1El.innerHTML = currentData.drinks[0].strDrink
+
+
+        })
+
+}
+
+
+
+
+
+
+
+
+// add EventListerner
+drinksFormEl.addEventListener("submit",displyDrinks)
