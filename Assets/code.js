@@ -5,6 +5,7 @@ var blueMargsBtn = document.querySelector("#blueMargs");
 var tommyMargsBtn = document.querySelector("#tommyMargs");
 var whitecapMargsBtn = document.querySelector("#whitecapMargs");
 var strawbMargsBtn = document.querySelector("#strawbMargs");
+var melonMargsBtn = document.querySelector("#melonMargs")
 var selectEl = document.querySelector("#select")
 // var drinksFormEl = document.querySelector("#drinksForm");
 // Current Searched drink cards selectors
@@ -45,6 +46,10 @@ function populateData(event) {
             return response.json();
         }) 
         .then(function(currentData) {
+            var ingredients4 = currentData.drinks[0].strIngredient4 == null ? " " : currentData.drinks[0].strIngredient4
+            var ingredients5 = currentData.drinks[0].strIngredient5 == null ? " " : currentData.drinks[0].strIngredient5
+            var ingredients6 = currentData.drinks[0].strIngredient6 == null ? " " : currentData.drinks[0].strIngredient6
+            var ingredients7 = currentData.drinks[0].strIngredient7 == null ? " " : currentData.drinks[0].strIngredient7
             console.log(currentData);
             // var margsVal = event.target.textContent
             // var blueMargsVal = event.target.textContent
@@ -62,15 +67,21 @@ function populateData(event) {
                 </div>
                 <div class="mt-4 flex justify-between">
                     <div>
-                        <h3 class="text-sm text-gray-700">
-                            <span aria-hidden="true" class="absolute inset-0" id="drinkCard1">${currentData.drinks[0].strDrink}</span>
+                        <h3 class="text-xl text-gray-700">
+                            <span id="drinkCard1">${currentData.drinks[0].strDrink}</span>
                         </h3>
-                        <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients1">
+                        <h3 class="text-base text-gray-700">
+                            <span id="drinkCard1">Ingredients: </span>
+                        </h3>
+                        <p class="mt-1 text-xl font-medium text-gray-500" id="ingredients1">
                             <ol>
                                 <li>${currentData.drinks[0].strIngredient1}</li>
                                 <li>${currentData.drinks[0].strIngredient2}</li>
                                 <li>${currentData.drinks[0].strIngredient3}</li>
-                                <li>${currentData.drinks[0].strIngredient4}</li>
+                                <li>${ingredients4}</li>
+                                <li>${ingredients5}</li>
+                                <li>${ingredients6}</li>
+                                <li>${ingredients7}</li>
                             </ol>
                         </p>
                         <p class="mt-1 text-sm text-gray-500" id="instructions1">${currentData.drinks[0].strInstructions}
@@ -125,3 +136,4 @@ blueMargsBtn.addEventListener("click",populateData);
 tommyMargsBtn.addEventListener("click",populateData);
 whitecapMargsBtn.addEventListener("click",populateData);
 strawbMargsBtn.addEventListener("click",populateData);
+melonMargsBtn.addEventListener("click",populateData);
