@@ -1,12 +1,13 @@
 // define HTMl Static Selectors
+var drinks = [];
 var drinksEl = document.querySelector("#drinks");
 var margsBtn = document.querySelector("#margs");
 var blueMargsBtn = document.querySelector("#blueMargs");
 var tommyMargsBtn = document.querySelector("#tommyMargs");
 var whitecapMargsBtn = document.querySelector("#whitecapMargs");
 var strawbMargsBtn = document.querySelector("#strawbMargs");
-var melonMargsBtn = document.querySelector("#melonMargs")
-var selectEl = document.querySelector("#select")
+var melonMargsBtn = document.querySelector("#melonMargs");
+var selectEl = document.querySelector("#select");
 // var drinksFormEl = document.querySelector("#drinksForm");
 // Current Searched drink cards selectors
 var drinkCard1El = document.querySelector("#drinkCard1");
@@ -46,6 +47,7 @@ function populateData(event) {
             return response.json();
         }) 
         .then(function(currentData) {
+            // defined variable with ternary opeator to not display null on page
             var ingredients4 = currentData.drinks[0].strIngredient4 == null ? " " : currentData.drinks[0].strIngredient4
             var ingredients5 = currentData.drinks[0].strIngredient5 == null ? " " : currentData.drinks[0].strIngredient5
             var ingredients6 = currentData.drinks[0].strIngredient6 == null ? " " : currentData.drinks[0].strIngredient6
@@ -113,17 +115,18 @@ function populateData(event) {
             // drinkCard2El.innerHTML = currentData.drinks[1].strDrink;
             // ingredients2El.textContent = "Ingredients: " + currentData.drinks[1].strIngredient1 + ", " + currentData.drinks[1].strIngredient2
 
-
-
-            console.log(drinkCard1El);
             // drinkCard1El.scrollTo({top:0, left:0, behavior:"smooth"});
             window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
+            pastDrinks()
         })
 
 }
 
 
-
+var pastDrinks = function (event) {
+    drinks.unshift({event});
+    localStorage.setItem("drinks",JSON.stringify(drinks));
+}
 
 
 
