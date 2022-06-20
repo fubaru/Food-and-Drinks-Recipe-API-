@@ -40,7 +40,7 @@ function populateData(event) {
     // URl for cocktail api
     var urlMargs = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${event.target.textContent}`
     console.log(event.target.textContent)
-    // var drink1Position = drinkCard1El.getBoundingClientRect().top
+    var drink1Position = selectEl.getBoundingClientRect().top
     fetch(urlMargs)
         .then(function(response){
             return response.json();
@@ -117,7 +117,7 @@ function populateData(event) {
 
             console.log(drinkCard1El);
             // drinkCard1El.scrollTo({top:0, left:0, behavior:"smooth"});
-            // window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
+            window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
         })
 
 }
