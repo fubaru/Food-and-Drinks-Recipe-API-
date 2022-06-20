@@ -28,7 +28,7 @@ var instructions1El = document.querySelector("#instructions3");
 var instructions1El = document.querySelector("#instructions4");
 var instructions1El = document.querySelector("#instructions5");
 
-// fuunction to display drinks
+// function to display drinks
 // function displyDrinks() {
 //     // event.preventDefault();
 //     // var drinksName = drinksEl.value
@@ -47,27 +47,26 @@ function populateData(event) {
             return response.json();
         }) 
         .then(function(currentData) {
+            console.log(currentData);
             // defined variable with ternary opeator to not display null on page
             var ingredients4 = currentData.drinks[0].strIngredient4 == null ? " " : currentData.drinks[0].strIngredient4
             var ingredients5 = currentData.drinks[0].strIngredient5 == null ? " " : currentData.drinks[0].strIngredient5
             var ingredients6 = currentData.drinks[0].strIngredient6 == null ? " " : currentData.drinks[0].strIngredient6
             var ingredients7 = currentData.drinks[0].strIngredient7 == null ? " " : currentData.drinks[0].strIngredient7
-            console.log(currentData);
-            // var margsVal = event.target.textContent
-            // var blueMargsVal = event.target.textContent
-            // console.log(blueMargsVal)
-            // var tommyMargsVal = currentData.drinks[2].idDrink
-            // var whitecapMargsVal = currentData.drinks[3].idDrink
-            // var strawbMargsVal = currentData.drinks[4].idDrink
+            var measure4 = currentData.drinks[0].strMeasure4 == null ? " " : " - " + currentData.drinks[0].strMeasure4
+            var measure5 = currentData.drinks[0].strMeasure5 == null ? " " : " - " + currentData.drinks[0].strMeasure5
+            var measure6 = currentData.drinks[0].strMeasure6 == null ? " " : " - " + currentData.drinks[0].strMeasure6
+            var measure7 = currentData.drinks[0].strMeasure7 == null ? " " : " - " + currentData.drinks[0].strMeasure7
+            
             // for (i=0; i < currentData.drinks.length; i++) {
                 selectEl.innerHTML =`<div class="group relative">
                 <div
-                    class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                    class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-fit lg:aspect-video">
                     <img src="${currentData.drinks[0].strDrinkThumb}"
-                        alt="Front of men&#039;s Basic Tee in black."
+                        alt="Drinks image"
                         class="w-full h-full object-center object-cover lg:w-full lg:h-full">
                 </div>
-                <div class="mt-4 flex justify-between">
+                <div class="mt-4 flex justify-between bg-white">
                     <div>
                         <h3 class="text-xl text-gray-700">
                             <span id="drinkCard1">${currentData.drinks[0].strDrink}</span>
@@ -77,13 +76,16 @@ function populateData(event) {
                         </h3>
                         <p class="mt-1 text-xl font-medium text-gray-500" id="ingredients1">
                             <ol>
-                                <li>${currentData.drinks[0].strIngredient1}</li>
-                                <li>${currentData.drinks[0].strIngredient2}</li>
-                                <li>${currentData.drinks[0].strIngredient3}</li>
-                                <li>${ingredients4}</li>
-                                <li>${ingredients5}</li>
-                                <li>${ingredients6}</li>
-                                <li>${ingredients7}</li>
+                                <li>${currentData.drinks[0].strIngredient1} -
+                                <span>${currentData.drinks[0].strMeasure1}</span></li>
+                                <li>${currentData.drinks[0].strIngredient2} -
+                                <span>${currentData.drinks[0].strMeasure2}</span></li>
+                                <li>${currentData.drinks[0].strIngredient3} -
+                                <span>${currentData.drinks[0].strMeasure3}</span></li>
+                                <li>${ingredients4}<span>${measure4}<span></li>
+                                <li>${ingredients5}<span>${measure5}<span></li>
+                                <li>${ingredients6}<span>${measure6}<span></li>
+                                <li>${ingredients7}<span>${measure7}<span></li>
                             </ol>
                         </p>
                         <p class="mt-1 text-sm text-gray-500" id="instructions1">${currentData.drinks[0].strInstructions}
@@ -91,29 +93,6 @@ function populateData(event) {
                     </div>
                 </div>
             </div>`
-            // var tommyMargsVal = currentData.drinks[2].idDrink
-            // var whitecapMargsVal = currentData.drinks[3].idDrink
-            // var strawbMargsVal = currentData.drinks[4].idDrink
-            // if(margsVal) {
-            //     drinkCard1El.textContent = currentData.drinks[0].strDrink;
-            //     ingredients1El.textContent = "Ingredients: " + currentData.drinks[0].strIngredient1 + ", " + currentData.drinks[0].strIngredient2
-            // } else if (blueMargsVal) {
-            //     drinkCard1El.textContent = currentData.drinks[1].strDrink;
-            //     ingredients1El.textContent = "Ingredients: " + currentData.drinks[1].strIngredient1 + ", " + currentData.drinks[1].strIngredient2
-            // }
-
-            // }
-            
-
-
-
-            // // drinkCArd1
-            // drinkCard1El.textContent = currentData.drinks[0].strDrink;
-            // ingredients1El.textContent = "Ingredients: " + currentData.drinks[0].strIngredient1 + ", " + currentData.drinks[0].strIngredient2
-
-            // // drinkCard2
-            // drinkCard2El.innerHTML = currentData.drinks[1].strDrink;
-            // ingredients2El.textContent = "Ingredients: " + currentData.drinks[1].strIngredient1 + ", " + currentData.drinks[1].strIngredient2
 
             // drinkCard1El.scrollTo({top:0, left:0, behavior:"smooth"});
             window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
