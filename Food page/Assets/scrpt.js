@@ -60,13 +60,6 @@ function populateData(event) {
                 console.log(recipe1Data);
                 console.log(recipe2Data);
                 console.log(recipe3Data);     
-                
-                
-
-
-
-             
-             
             });
         });
     });
