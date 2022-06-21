@@ -32,9 +32,10 @@ var ingredients3EL = document.querySelector("#ingredients3");
 var instructions1EL = document.querySelector("#instructions1");
 var instructions2EL = document.querySelector("#instructions2");
 var instructions3EL = document.querySelector("#instructions3");
+var image1El = document.querySelector("#image1")
 var recipesBtn = document.querySelector("#button-recipes");
 
-function populateData() {
+function populateData(event) {
   var recipe1 = `https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`;
   fetch(recipe1)
     .then(function (response) {
@@ -56,8 +57,15 @@ function populateData() {
               return response.json();
             })
             .then(function (recipe3Data) {
-            
-             console.log(recipe3Data);
+                console.log(recipe1Data);
+                console.log(recipe2Data);
+                console.log(recipe3Data);     
+                
+                
+
+
+
+             
              
             });
         });
@@ -67,3 +75,5 @@ function populateData() {
 }
 
 recipesBtn.addEventListener("click", populateData);
+
+
