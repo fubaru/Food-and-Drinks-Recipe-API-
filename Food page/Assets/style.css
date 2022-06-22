@@ -10,7 +10,7 @@
     --white-light: #c8c8c8;
     --shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     scroll-behavior: smooth;
-    --cursive-font: font-family: 'Dancing Script', cursive;
+    --cursive-font: 'Dancing Script', cursive;
 }
 
 
@@ -30,30 +30,25 @@ body{
     font-size: 16px;
     line-height: 1.5;
     -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: var(--white-light);
 }
-.container{
-    max-width: 1170px;
-    background-color: red;
-    margin: auto;
-}
+
 .row{
     display: flex;
     flex-wrap: wrap;
 }
-.justify-content-between{
-    justify-content: space-between;
-}
-.align-items-center{
-    align-items: center;
-}
-
 /* header  */
 .header{
     padding: 12px 0;
     background-color: black;
 }
 .header .logo{ 
-    background-color: var(--main-color);
+    background-color: black;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
 }
 .header .nav-toggler{
    height: 34px; 
@@ -103,6 +98,71 @@ h6{
 }
 .min-vh-100{
     min-height: 100vh;
+}
+.sec-padding{
+    padding: 80px 0;
+}
+/* section title */
+.section-title{
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title h2{
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.section-title h2::before{
+    content:attr(data-title);
+    display: block;
+    font-size: 24px;
+    color: rgb(223, 223, 28);
+    font-family: var(--cursive-font);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+/* buttons*/
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: transparent;
+    border-radius: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: inherit;
+    color: rgb(223, 223, 28);
+    line-height: 1.5;
+    user-select: none;
+    border: none;
+}
+.btn-default{
+    border: 2px solid rgb(223, 223, 28);
+}
+.btn-default:hover{
+    color: var(--white);
+    background-color: rgb(223, 223, 28);
+}
+/*animation keyframes*/
+@keyframes zoomInOut{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+@keyframes spin01{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 /* header  */
 .header{
@@ -218,7 +278,20 @@ h6{
 }
 /* home-section*/
 .home-section{
-    /*background-color: var(--main-color);*/
+   position: relative;
+   overflow: hidden;
+}
+
+.home-section::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*background-color: #000000;*/
+    opacity: 0.7;
+    z-index: -1;
 }
 .home-section .home-bg{
     position: absolute;
@@ -226,7 +299,12 @@ h6{
     top: 0;
     height: 100%;
     width: 100%;
-    
+    background-image: url('../Images/shakshuka.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    animation: zoomInOut 20s ease infinite;
 }
 .home-section .min-vh-100{
     padding: 100px 0;
@@ -238,3 +316,95 @@ h6{
     margin: auto;
     text-align: center;
 }
+.home-text h1{
+    font-family: var(--cursive-font);
+    font-size: 60px;
+    line-height: 75px;
+    margin: 0 0 5px;
+}
+.home-text p{
+    margin: 0 0 30px;
+}
+
+/* about section */
+.about-section{
+    background-color: var(--dark-light);
+}
+.about-img{
+    width: 40%;
+    margin: auto;
+    padding: 0 15px;
+    margin-right: 0.2rem;
+}
+.about-text h3{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.about-text p{
+    padding: 30px;
+    margin: 0 0 15px;
+    margin-left: 0.2rem;
+    margin: 20px 20px 50px;
+}
+.about-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+.about-img .img-box{
+    position: relative;
+    left: cals(50% - 50%);
+    top: calc(50% - 50%);
+    animation: spin01 10s linear infinite;
+}
+/* recipe-section*/
+.recipe-section{
+background-color: var(--dark);
+}
+.recipe-section .section-title{
+    margin-bottom: 40px;
+}
+.recipe-tabs{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.recipe-tab-item{
+    font-size: 18px;
+    font-family: inherit;
+    text-transform: capitalize;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.recipe-tab-item.active{
+    color: var(--main-color);
+}
+.container-card{
+   width: 20%;
+   display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
