@@ -12,6 +12,7 @@ var casinoBtn = document.querySelector("#casino");
 var mimosaBtn = document.querySelector("#mimosa");
 var maitaiBtn = document.querySelector("#maitai");
 var selectEl = document.querySelector("#select");
+var pastSelectEl = document.querySelector("#pastSelect")
 // var drinksFormEl = document.querySelector("#drinksForm");
 // Current Searched drink cards selectors
 var drinkCard1El = document.querySelector("#drinkCard1");
@@ -101,20 +102,32 @@ function populateData(event) {
 
             // drinkCard1El.scrollTo({top:0, left:0, behavior:"smooth"});
             window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
-            pastDrinks()
+            pastDrinks(event.target.textContent)
         })
 
 }
 
 
 var pastDrinks = function (event) {
-    drinks.unshift({event});
+    drinks.unshift(event);
     localStorage.setItem("drinks",JSON.stringify(drinks));
+    displayPastDrinks();
 }
 
 
+function displayPastDrinks () {
+    var drinkData = JSON.parse(localStorage.getItem("drinks"))
+    if (drinkData) {
+        drinks = drinkData;
+    }
+    for (i=0; i < drinks.length; i++) {
+        console.log(drinks[i])
+        // pastSelectEl.textContent = drinks[i];
+        // populateData(drinks[i]);
+    }
+}
 
-
+displayPastDrinks();
 
 // add EventListerner
 // drinksFormEl.addEventListener("click",populateData)
