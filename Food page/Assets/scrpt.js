@@ -61,14 +61,14 @@ function populateData1() {
               <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients1">
               <h3>Ingredients</h3>
               <ol>
-              <li>${recipe1Data.meals[0].strIngredient1}<li>
-              <li>${recipe1Data.meals[0].strIngredient2}<li>
-              <li>${recipe1Data.meals[0].strIngredient3}<li>
-              <li>${recipe1Data.meals[0].strIngredient4}<li>
-              <li>${recipe1Data.meals[0].strIngredient5}<li>
-              <li>${recipe1Data.meals[0].strIngredient6}<li>
-              <li>${recipe1Data.meals[0].strIngredient7}<li>
-              <li>${recipe1Data.meals[0].strIngredient8}<li>
+              <li>${recipe1Data.meals[0].strIngredient1}</li>
+              <li>${recipe1Data.meals[0].strIngredient2}</li>
+              <li>${recipe1Data.meals[0].strIngredient3}</li>
+              <li>${recipe1Data.meals[0].strIngredient4}</li>
+              <li>${recipe1Data.meals[0].strIngredient5}</li>
+              <li>${recipe1Data.meals[0].strIngredient6}</li>
+              <li>${recipe1Data.meals[0].strIngredient7}</li>
+              <li>${recipe1Data.meals[0].strIngredient8}<l/i>
               </ol>
               </p>
               <p class="mt-1 text-sm text-gray-500" id="instructions1">${recipe1Data.meals[0].strInstructions}
@@ -120,15 +120,15 @@ function populateData2() {
               <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients1">
               <h3>Ingredients</h3>
               <ol>
-              <li>${recipe2Data.meals[0].strIngredient1}<li>
-              <li>${recipe2Data.meals[0].strIngredient2}<li>
-              <li>${recipe2Data.meals[0].strIngredient3}<li>
-              <li>${recipe2Data.meals[0].strIngredient4}<li>
-              <li>${recipe2Data.meals[0].strIngredient5}<li>
-              <li>${recipe2Data.meals[0].strIngredient6}<li>
-              <li>${recipe2Data.meals[0].strIngredient7}<li>
-              <li>${recipe2Data.meals[0].strIngredient8}<li>
-              <li>${recipe2Data.meals[0].strIngredient9}<li>
+              <li>${recipe2Data.meals[0].strIngredient1}</li>
+              <li>${recipe2Data.meals[0].strIngredient2}</li>
+              <li>${recipe2Data.meals[0].strIngredient3}</li>
+              <li>${recipe2Data.meals[0].strIngredient4}</li>
+              <li>${recipe2Data.meals[0].strIngredient5}</li>
+              <li>${recipe2Data.meals[0].strIngredient6}</li>
+              <li>${recipe2Data.meals[0].strIngredient7}</li>
+              <li>${recipe2Data.meals[0].strIngredient8}</li>
+              <li>${recipe2Data.meals[0].strIngredient9}</li>
               </ol>
               </p>
               <p class="mt-1 text-sm text-gray-500" id="instructions1">${recipe2Data.meals[0].strInstructions}
@@ -162,15 +162,15 @@ fetch(recipe3)
               <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients1">
               <h3>Ingredients</h3>
               <ol>
-              <li>${recipe3Data.meals[0].strIngredient1}<li>
-              <li>${recipe3Data.meals[0].strIngredient2}<li>
-              <li>${recipe3Data.meals[0].strIngredient3}<li>
-              <li>${recipe3Data.meals[0].strIngredient4}<li>
-              <li>${recipe3Data.meals[0].strIngredient5}<li>
-              <li>${recipe3Data.meals[0].strIngredient6}<li>
-              <li>${recipe3Data.meals[0].strIngredient7}<li>
-              <li>${recipe3Data.meals[0].strIngredient8}<li>
-              <li>${recipe3Data.meals[0].strIngredient9}<li>
+              <li>${recipe3Data.meals[0].strIngredient1}</li>
+              <li>${recipe3Data.meals[0].strIngredient2}</li>
+              <li>${recipe3Data.meals[0].strIngredient3}</li>
+              <li>${recipe3Data.meals[0].strIngredient4}</li>
+              <li>${recipe3Data.meals[0].strIngredient5}</li>
+              <li>${recipe3Data.meals[0].strIngredient6}</li>
+              <li>${recipe3Data.meals[0].strIngredient7}</li>
+              <li>${recipe3Data.meals[0].strIngredient8}</li>
+              <li>${recipe3Data.meals[0].strIngredient9}</li>
               </ol>
               </p>
               <p class="mt-1 text-sm text-gray-500" id="instructions1">${recipe3Data.meals[0].strInstructions}
