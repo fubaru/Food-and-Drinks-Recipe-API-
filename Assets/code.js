@@ -44,8 +44,13 @@ var instructions1El = document.querySelector("#instructions5");
 
 function populateData(event) {
     // URl for cocktail api
-    var urlMargs = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${event.target.textContent}`
-    console.log(event.target.textContent)
+    populatePastDrinks(event.target.textContent);
+
+}
+
+function populatePastDrinks(drink) {
+    var urlMargs = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`
+    console.log(drink)
     var drink1Position = selectEl.getBoundingClientRect().top
     fetch(urlMargs)
         .then(function(response){
@@ -102,16 +107,14 @@ function populateData(event) {
 
             // drinkCard1El.scrollTo({top:0, left:0, behavior:"smooth"});
             window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
-            pastDrinks(event.target.textContent)
+            saveDrinks(drink)
         })
-
 }
 
 
-var pastDrinks = function (event) {
-    drinks.unshift(event);
+var saveDrinks = function (event) {
+    drinks.push(event);
     localStorage.setItem("drinks",JSON.stringify(drinks));
-    displayPastDrinks();
 }
 
 
@@ -120,11 +123,8 @@ function displayPastDrinks () {
     if (drinkData) {
         drinks = drinkData;
     }
-    for (i=0; i < drinks.length; i++) {
-        console.log(drinks[i])
-        // pastSelectEl.textContent = drinks[i];
-        // populateData(drinks[i]);
-    }
+    var lastIndex = drinks.length-1
+    populatePastDrinks(drinks[lastIndex]);
 }
 
 displayPastDrinks();
