@@ -40,6 +40,7 @@ var recipesBtn = document.querySelector("#button-recipes");
 
 function populateData1() {
   var recipe1 = `https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`;
+  var recipe1position = recipecard1El.getBoundingClientRect().top
   fetch(recipe1)
     .then(function (response) {
       return response.json();
@@ -95,6 +96,7 @@ function populateData1() {
               console.log(recipe3Data);
             });
         });*/
+        window.scrollTo({top:recipe1position, left:0, behavior:"smooth"})
     });
 }
 function populateData2() {
