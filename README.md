@@ -5,12 +5,15 @@
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 
 - What was your motivation? : 
--Everyone loves making food and we wanted to bring together a page where you can easily find some of our favorite recipes.
+- Everyone loves making food and we wanted to bring together a page where you can easily find some of our favorite recipes.
 
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-we wanted to give a place that users can access Recepies easily
+- Why did you build this project?:
+- we wanted to give a place that users can access Recepies easily
 
 - What did you learn?
+- As a team we learned how to collaborate and communicate the deliverables 
+we build more knowledge about Github and 3rd Parties API and how to implement them correctly
+ 
 
 ## Table of Contents (Optional)
 
