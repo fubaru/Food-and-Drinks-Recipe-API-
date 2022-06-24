@@ -23,6 +23,8 @@ window.addEventListener("scroll", function () {
     document.querySelector(".header").classList.remove("sticky");
   }
 });
+/*--------------All Global Variabeles------------*/
+var meals = [];
 var recipecard1El = document.querySelector("#recipeCard1");
 var recipecard2EL = document.querySelector("#recipeCard2");
 var recipecard3EL = document.querySelector("#recipeCard3");
@@ -37,6 +39,7 @@ var number2EL = document.querySelector("#number2");
 var number3EL = document.querySelector("#number3");
 var image1El = document.querySelector("#image1");
 var recipesBtn = document.querySelector("#button-recipes");
+
 
 function populateData1() {
   var recipe1 = `https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`;
@@ -97,6 +100,7 @@ function populateData1() {
             });
         });*/
         window.scrollTo({top:recipe1position, left:0, behavior:"smooth"})
+      
     });
 }
 function populateData2() {
@@ -184,8 +188,22 @@ fetch(recipe3)
 
 }
 
+var pastMeals = function (event) {
+  meals.unshift({event});
+  localStorage.setItem("meals",JSON.stringify(meals));
+}
 
-
+function displayPastMeals () {
+  localStorage.setItem("meals",JSON.stringify("arrabiata"));
+  var recipeData = JSON.parse(localStorage.getItem("meals"))
+  console.log(recipeData)
+  if (recipeData) {
+      meals = recipeData;
+  }
+  var lastIndex = meals.length-1
+  /*populatePastMeals(meals[lastIndex]);*/
+}
+displayPastMeals();
 recipesBtn.addEventListener("click", populateData1);
 recipecard1El.addEventListener("click", populateData1);
 number1EL.addEventListener("click",populateData1);

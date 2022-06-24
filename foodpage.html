@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Food page/Assets/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
 </head>
 
 <body>
@@ -22,12 +23,9 @@
                 </button>
                 <nav class="nav">
                     <ul>
-                        <li class="nav-item"><a href="about-our-recipes">Our Recipes</a></li>
-                        <li class="nav-item" id="number1"><a href="#arrabiata">Arrabiata</a></li>
+                        <li class="nav-item" id="number1"><a href="#arrabiata">Arrabiata</a><li>
                         <li class="nav-item" id="number2"><a href="#teriyaki">Teriyaki</a></li>
                         <li class="nav-item" id="number3"><a href="#tart">Tart</a></li>
-                        <li class="nav-item"><a href="Murtabak">Murtabak</a></li>
-                        <li class="nav-item"><a href="#contact">Conatact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -45,8 +43,10 @@
                     <h1>Delicious food recipes</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua.</p>
-                    <a href="#our-recipes" class="btn btn-default" id="button-recipes">Our Recipes</a>
-
+                    
+                    <a href="#our-recipes" class="btn btn-default" id="button-recipes">scroll down 😋</a>
+                        
+                     
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-right">
                     <h3>Welcome to Our Delicious Food Recipes Page</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut labore et
@@ -83,9 +83,9 @@
                         aliqua. Ut enim ad minim veniam,prehenderit in voluptate velit esse
                         quis nostrud exercitation ullamco laboris nisi u in re
                         cillum dolore eu fugiat nulla pariatur.</p>
-                    <a href="#our-dishes" class="btn btn-default">Check our recipes</a>
+                    <a href="#our-dishes" class="btn btn-default">Keep scrolling 👇🏽</a>
                 </div>
-                <div class="about-img">
+                <div class="about-img" data-aos="fade-left">
                     <div class="img-box">
                         <img src="./Food page/Images/sea.jpg" alt="about img">
 
@@ -108,19 +108,19 @@
             </div>
             <div class="row">
                 <div class="recipe-tabs">
-                    <button type="button" class="recipe-tab-item active" data-title="shakshuka">shakshuka</button>
+                    <button type="button" class="recipe-tab-item active" data-title="buon appetito">Buon appetito ☺️ </button>
                 </div>
             </div>
-            <div class="row recipe-tab-content" id="shashuka">
+           <!-- <div class="row recipe-tab-content" id="shashuka">
             </div>
             <div class="row recipe-tab-content" id="shashuka">
             </div>
             <div class="row recipe-tab-content" id="shashuka">
             </div>
-            <div class="row recipe-tab-content" id="shashuka">
+            <div class="row recipe-tab-content" id="shashuka">-->
                 <div class="container-card bg-stone-50">
                     <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                        <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Recipes Picked</h2>
+                        <h2 class="title text-2xl font-extrabold tracking-tight text-gray-900">Recipes Picked</h2>
 
                         <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
                             id="recipeCard1">
@@ -138,12 +138,12 @@
                                                 </h3>
                                                 <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients1">Ingredients
                                                 </p>
-                                                <p class="mt-1 text-sm text-gray-500" id="instructions1">Instructions of the drinks
+                                                <p class="mt-1 text-sm text-gray-500" id="instructions1">Instructions of the meal
                                                 </p>
                                             </div>
                                         </div>
                                     </div>-->
-                            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+                            <div class="container-card mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
                                 id="recipeCard2"></div>
                             <!--<div class="group relative">
                                         <div
@@ -155,16 +155,16 @@
                                         <div class="mt-4 flex justify-between">
                                             <div>
                                                 <h3 class="text-sm text-gray-700">
-                                                    <span aria-hidden="true" class="absolute inset-0" id="drinkCard2">drink#2</span>
+                                                    <span aria-hidden="true" class="absolute inset-0" id="recipeCard2">recipe#2</span>
                                                 </h3>
                                                 <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients2">Ingredients
                                                 </p>
-                                                <p class="mt-1 text-sm text-gray-500" id="instructions2">Instructions of the drinks
+                                                <p class="mt-1 text-sm text-gray-500" id="instructions2">Instructions of the recipes
                                                 </p>
                                             </div>
                                         </div>
                                     </div>-->
-                            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+                            <div class="container-card mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
                                 id="recipeCard3"></div>
                             <!-- <div class="group relative">
                                         <div
@@ -176,11 +176,11 @@
                                         <div class="mt-4 flex justify-between">
                                             <div>
                                                 <h3 class="text-sm text-gray-700">
-                                                    <span aria-hidden="true" class="absolute inset-0" id="drinkCard3">drink#3</span>
+                                                    <span aria-hidden="true" class="absolute inset-0" id="recipeCard3">recipe#3</span>
                                                 </h3>
                                                 <p class="mt-1 text-sm font-medium text-gray-500" id="ingredients3">Ingredients
                                                 </p>
-                                                <p class="mt-1 text-sm text-gray-500" id="instructions3">Instructions of the drinks
+                                                <p class="mt-1 text-sm text-gray-500" id="instructions3">Instructions of the recipe
                                                 </p>
                                             </div>
                                         </div>-->
@@ -191,26 +191,44 @@
             </div>
         </div>
 
-
-        </div>
-        </div>
-        </div>
-
-
-
-
-
-
-
-
-        </div>
-        </div>
+        
     </section>
     <!---- recipe section end---->
 
+    <!-- footer start-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-item">
+                    <h3>Contact us</h3>
+                    <p>666-666-6666</p>
+                    <p>recipe@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#" class="icon-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="copyright">
+                   &copy; 2022 - Desinged by Anisa
+                </div>
+
+            </div>
+        </div>
 
 
 
+
+
+    </footer>
+    <!--footer end-->
+
+
+
+    
     <script src="./Food page/Assets/scrpt.js"></script>
 </body>
 
