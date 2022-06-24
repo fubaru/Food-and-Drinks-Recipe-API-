@@ -39,18 +39,18 @@ var number2EL = document.querySelector("#number2");
 var number3EL = document.querySelector("#number3");
 var image1El = document.querySelector("#image1");
 var recipesBtn = document.querySelector("#button-recipes");
-
+/*------------End of Global Variables-------------*/
 
 function populateData1() {
   var recipe1 = `https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`;
-  var recipe1position = recipecard1El.getBoundingClientRect().top
+  var recipe1position = recipecard1El.getBoundingClientRect().top;
   fetch(recipe1)
     .then(function (response) {
       return response.json();
     })
     .then(function (recipe1Data) {
       console.log(recipe1Data);
-      recipecard1El.innerHTML =`<div class="group relative">
+      recipecard1El.innerHTML = `<div class="group relative">
       <div
           class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
           <img src="${recipe1Data.meals[0].strMealThumb}"
@@ -79,7 +79,7 @@ function populateData1() {
               </p>
           </div>
       </div>
-  </div>`
+  </div>`;
       /*var recipe2 = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772`;
       fetch(recipe2)
         .then(function (response) {
@@ -99,8 +99,7 @@ function populateData1() {
               console.log(recipe3Data);
             });
         });*/
-        window.scrollTo({top:recipe1position, left:0, behavior:"smooth"})
-      
+      window.scrollTo({ top: recipe1position, left: 0, behavior: "smooth" });
     });
 }
 function populateData2() {
@@ -111,7 +110,7 @@ function populateData2() {
     })
     .then(function (recipe2Data) {
       console.log(recipe2Data);
-      recipecard2EL.innerHTML =`<div class="group relative">
+      recipecard2EL.innerHTML = `<div class="group relative">
       <div
           class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
           <img src="${recipe2Data.meals[0].strMealThumb}"
@@ -141,19 +140,18 @@ function populateData2() {
               </p>
           </div>
       </div>
-  </div>`
-
+  </div>`;
     });
 }
 function populateData3() {
-var recipe3 = `https://www.themealdb.com/api/json/v1/1/random.php`;
-fetch(recipe3)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (recipe3Data) {
-    console.log(recipe3Data);
-    recipecard2EL.innerHTML =`<div class="group relative">
+  var recipe3 = `https://www.themealdb.com/api/json/v1/1/random.php`;
+  fetch(recipe3)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (recipe3Data) {
+      console.log(recipe3Data);
+      recipecard2EL.innerHTML = `<div class="group relative">
       <div
           class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
           <img src="${recipe3Data.meals[0].strMealThumb}"
@@ -183,31 +181,33 @@ fetch(recipe3)
               </p>
           </div>
       </div>
-  </div>`
-  });
-
+  </div>`;
+    });
 }
 
 var pastMeals = function (event) {
-  meals.unshift({event});
-  localStorage.setItem("meals",JSON.stringify(meals));
-}
+  meals.unshift({ event });
+  localStorage.setItem("meals", JSON.stringify(meals));
+};
 
-function displayPastMeals () {
-  localStorage.setItem("meals",JSON.stringify("arrabiata"));
-  var recipeData = JSON.parse(localStorage.getItem("meals"))
-  console.log(recipeData)
+function displayPastMeals() {
+  localStorage.setItem("meals", JSON.stringify("arrabiata"));
+  var recipeData = JSON.parse(localStorage.getItem("meals"));
+  console.log(recipeData);
   if (recipeData) {
-      meals = recipeData;
+    meals = recipeData;
   }
-  var lastIndex = meals.length-1
+  var lastIndex = meals.length - 1;
   /*populatePastMeals(meals[lastIndex]);*/
 }
 displayPastMeals();
+
+
+/*-----All EventListeners--------*/
 recipesBtn.addEventListener("click", populateData1);
 recipecard1El.addEventListener("click", populateData1);
-number1EL.addEventListener("click",populateData1);
+number1EL.addEventListener("click", populateData1);
 recipecard2EL.addEventListener("click", populateData2);
-number2EL.addEventListener("click",populateData2);
+number2EL.addEventListener("click", populateData2);
 recipecard3EL.addEventListener("click", populateData3);
-number3EL.addEventListener("click",populateData3);
+number3EL.addEventListener("click", populateData3);
