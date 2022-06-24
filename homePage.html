@@ -7,22 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&F recipes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./assets/homePage.css">
-    <!-- <style type="text/tailwindcss">
-        @layer utilities {
-          .content-auto {
-            content-visibility: auto;
-          }
-        } -->
+    <link rel="stylesheet" href="./homePageAssets/homePage.css">
       </style>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Kdam+Thmor+Pro&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black " >
+<body class="bg-black" >
     <header>
-        <h1 class=" title text-gray-200 text-7xl text-center pt-36 shadow-2xl shadow-white">F&D RECIPES</h1>
+        <h1 id= "Title" class=" title text-gray-200 text-7xl text-center pt-36 shadow-2xl shadow-white">F&D RECIPES</h1>
     </header>
     <div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
@@ -32,7 +26,7 @@
             <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-6" >
               <div class="group relative shadow-2xl shadow-white rounded-lg">
                 <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img src="./assets/images/drinks_homePage.jpg" alt="drink image" class="w-full h-full object-center object-cover">
+                  <img src="./homePageAssets/images/drinks_homePage.jpg" alt="drink image" class="w-full h-full object-center object-cover">
                 </div>
                 <h3 class="mt-6 text-sm text-gray-100">
                   <a href="#">
@@ -44,7 +38,7 @@
               </div>
               <div class="group relative shadow-2xl shadow-white rounded-lg">
                 <div class="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img src="./assets/images/food_homePage.jpg" alt="food image" class="w-full h-full object-center object-cover">
+                  <img src="./homePageAssets/images/food_homePage.jpg" alt="food image" class="w-full h-full object-center object-cover">
                 </div>
                 <h3 class="mt-6 text-sm text-gray-100">
                   <a href="#">
@@ -58,5 +52,7 @@
           </div>
         </div>
       </div>
+
+      <script src="./Assets/homePage.js"></script>
 </body>
 </html>
