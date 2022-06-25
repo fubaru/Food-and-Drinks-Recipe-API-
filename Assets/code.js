@@ -13,7 +13,6 @@ var mimosaBtn = document.querySelector("#mimosa");
 var maitaiBtn = document.querySelector("#maitai");
 var selectEl = document.querySelector("#select");
 var pastSelectEl = document.querySelector("#pastSelect")
-// var drinksFormEl = document.querySelector("#drinksForm");
 // Current Searched drink cards selectors
 var drinkCard1El = document.querySelector("#drinkCard1");
 var drinkCard2El = document.querySelector("#drinkCard2");
@@ -70,7 +69,6 @@ function populatePastDrinks(drink) {
             var measure6 = currentData.drinks[0].strMeasure6 == null ? " " : " - " + currentData.drinks[0].strMeasure6
             var measure7 = currentData.drinks[0].strMeasure7 == null ? " " : " - " + currentData.drinks[0].strMeasure7
             
-            // for (i=0; i < currentData.drinks.length; i++) {
                 selectEl.innerHTML =`<div class="group relative">
                 <div
                     class="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden lg:h-fit lg:aspect-video">
@@ -105,7 +103,6 @@ function populatePastDrinks(drink) {
                 </div>
             </div>`
 
-            // drinkCard1El.scrollTo({top:0, left:0, behavior:"smooth"});
             window.scrollTo({top:drink1Position, left:0, behavior:"smooth"})
             saveDrinks(drink)
         })
@@ -130,7 +127,6 @@ function displayPastDrinks () {
 displayPastDrinks();
 
 // add EventListerner
-// drinksFormEl.addEventListener("click",populateData)
 margsBtn.addEventListener("click",populateData);
 blueMargsBtn.addEventListener("click",populateData);
 tommyMargsBtn.addEventListener("click",populateData);
