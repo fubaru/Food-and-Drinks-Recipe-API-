@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Food and Cocktail Recipes API project
 
 This Project was designed as a homework assignment for OSU's Coding bootcamp hosted by Trilogy. 
@@ -58,5 +58,3 @@ Crediting TA Brian Baker for helping out on the auto scroll code in JS file to c
 * Drink page has preloaded buttons that allows the users to pick the desired drink to display the drink recipes including image, ingredients, measurements of ingredients, and the instructions. 
 * Food Page has the functions to display the meal recipes including image, ingredients, measurements of ingredients, and the instructions. 
 * local storage functions are able to store each clicked data and then recall back onto the page. The stored data persists on the page. 
-=======
->>>>>>> develop
