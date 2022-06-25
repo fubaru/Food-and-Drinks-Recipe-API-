@@ -5,17 +5,13 @@ This Project was designed as a homework assignment for OSU's Coding bootcamp hos
 
 The Food and Cocktail Recipes API project mainly focuses on using the server side API links to fetch data into our JS and populate it onto our HTML page. Our group decided to use the structure of three separate HTML pages to display our recipe pages along with a homepage. The homepage acts as a directory and gives the user the option to view the food recipe page or the drink recipe page. Within each food and drink recipe page, user is able to interact with buttons or link selections to display the desired preset recipe that is fetched from the API links. 
 
-This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
-
-* [GitHub Repository]()
-* [Deployed GitHub IO]()
-
 ## Table of Contents (Optional)
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Features](#features)
 
 ## Installation
 
@@ -23,7 +19,7 @@ For installtion of this application, you would require a text editor. Visual Stu
 
 ## Usage
 
-![Alt text]()
+![Alt text](./homePageAssets/recipe%20demo.gif)
 
 ## Credits
 
@@ -44,12 +40,6 @@ Crediting TA Brian Baker for helping out on the auto scroll code in JS file to c
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
-
-## Badges
-
-![badmath](https://img.shields.io/badge/HTML-31.3%25-orange)
-![badmath](https://img.shields.io/badge/JavaScript-68.7%-yellow)
-
 
 ## Features
 
