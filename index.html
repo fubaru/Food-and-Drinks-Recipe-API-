@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./Assets/style.css"></script>
+    <title>Drink Search</title>
+</head>
+
+<body>
+    <div class="bg-black">
+        <div class="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto py-16 sm:py-24 lg:py-32 lg:max-w-none">
+                <h1 class="text-5xl font-extrabold text-white text-center">Drink Recipes</h1>
+
+                <div class="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-1 lg:gap-x-6 max-h-xl">
+                    <div class="group relative">
+                        <div
+                            class="relative w-full h-full bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-96 lg:aspect-w-1 lg:aspect-h-1">
+                            <img src="./Assets/drink-g98d080707_1920.jpg" alt="3 drinks."
+                                class="w-full h-full object-center object-cover">
+                        </div>
+
+                        <div>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Strawberry Margarita" id="boxcar">Boxcar</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Strawberry Margarita" id="casino">Casino</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Strawberry Margarita" id="mimosa">Mimosa</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Strawberry Margarita" id="maitai">Mai Tai</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Margarita" id="margs">Margarita</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Blue Margarita" id="blueMargs">Blue Margarita</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Tommy's Margarita" id="tommyMargs">Tommy's Margarita</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Whitecap Margarita" id="whitecapMargs">Whitecap Margarita</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Strawberry Margarita" id="strawbMargs">Strawberry Margarita</button>
+                                <button class="rounded-full bg-blue-300 text-slate-700 mt-2 w-80 text-2xl" value="Strawberry Margarita" id="melonMargs">Smashed Watermelon Margarita</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-stone-50">
+        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Drinks Picked</h2>
+
+            <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-1 xl:gap-x-8" id="select">
+        
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./Assets/code.js"></script>
+
+</html>
