@@ -80,25 +80,6 @@ function populateData1() {
           </div>
       </div>
   </div>`;
-      /*var recipe2 = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772`;
-      fetch(recipe2)
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (recipe2Data) {
-          console.log(recipe2Data);
-
-          var recipe3 = `https://www.themealdb.com/api/json/v1/1/random.php`;
-          fetch(recipe3)
-            .then(function (response) {
-              return response.json();
-            })
-            .then(function (recipe3Data) {
-              console.log(recipe1Data);
-              console.log(recipe2Data);
-              console.log(recipe3Data);
-            });
-        });*/
       window.scrollTo({ top: recipe1position, left: 0, behavior: "smooth" });
     });
 }
@@ -185,13 +166,25 @@ function populateData3() {
     });
 }
 
-var pastMeals = function (event) {
-  meals.unshift({ event });
+var storeMeal= function (meal) {
+  meals.unshift(meal);
   localStorage.setItem("meals", JSON.stringify(meals));
 };
-
+function getPastMeals() {
+var recipe = JSON.parse(localStorage.getItem("meals"));
+if (recipe != null) {
+  meals = recipe;
+}
+}
+function createMealCard(meal) {
+  
+}
 function displayPastMeals() {
-  localStorage.setItem("meals", JSON.stringify("arrabiata"));
+  getPastMeals();
+  if (meals.length < 1) 
+    return ;
+   var recentMeal = meals[0];
+  localStorage.setItem("meals", JSON.stringify(""));
   var recipeData = JSON.parse(localStorage.getItem("meals"));
   console.log(recipeData);
   if (recipeData) {
